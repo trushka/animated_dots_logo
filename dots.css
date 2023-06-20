@@ -1,0 +1,23 @@
+body {
+  background: #111;
+}
+.dashes {
+  margin: auto;
+  width: 480px;
+  height: 640px;
+  --w: 30;
+  --h: 40;
+  display: grid;
+  grid-template-columns: repeat(var(--w), 1fr);
+  grid-template-rows: repeat(var(--h), 1fr);
+  outline: 1px solid;
+}
+.dashes>* {
+  height: 70%;
+  width: 70%;
+  background: #fffa;
+  margin: auto;
+  transform-origin: 50% 100%;
+  will-change: transform;
+  border-radius: 50%
+}
