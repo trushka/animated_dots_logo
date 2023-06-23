@@ -3,13 +3,13 @@ body {
 }
 .dashes {
   margin: auto;
-  width: 300px;
+  width: 600px;
   height: 400px;
-  --w: 30;
   --h: 40;
   font-size: 10px;
   position: relative;
   outline: 1px solid;
+  display: block;
 }
 .dashes>* {
   margin: -.35em;
