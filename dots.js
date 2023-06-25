@@ -111,7 +111,7 @@ requestAnimationFrame(function anim(t){
 
 		f.add(dPos.mult(.005));//
 
-		v.add(f.mult(dt*.1)).setL(Math.min(v.l, .3)).mult(Math.exp(-dt*.02));
+		v.add(f.mult(dt*.1)).setL(Math.min(v.l, .2)).mult(Math.exp(-dt*.02));
 
 		const [x, y] = pos.add(vec2(v).mult(dt)).xy;
 		
@@ -125,3 +125,24 @@ requestAnimationFrame(function anim(t){
 	}
 	//targets.length = 0;
 })
+
+/*const gl = $el[0].getContext('webgl');//, {premultipliedAlpha: false});
+//twgl.addExtensionsToContext(gl);
+gl.enable(gl.BLEND);
+gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+const programInfo = twgl.createProgramInfo(gl, [`
+		precision mediump float;
+
+		attribute vec2 coord;
+
+		uniform vec2 resolution;
+		uniform float size;
+		uniform float pRatio;
+
+		void main() {
+			gl_Position.xy = coord / resolution;
+			gl_Position.y = 1.
+
+
+*/
